@@ -1,0 +1,12 @@
+let config = {};
+config.location = params.location || '';
+config.query = params.query || '';
+config.pageno = params.pageno || 1;
+config.limit = PAGE_LIMIT;
+config.obj_id = params.obj_id || '';
+config.category = params.category || '';
+config.business = params.business || '';
+config.page_type = page_type;
+config.tollfree_buisnesses= {data:[]};
+config.data= { data : [] };
+export default config;

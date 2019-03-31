@@ -1,0 +1,77 @@
+@import  '../global.css';
+.mr10{margin-right:10px}
+.m10{margin:10px}
+.ml10{margin-left:10px}
+.mb14{margin-bottom:14px}
+
+input[type="text"],
+textarea {
+  background: #37393b;
+  height: 50px;
+  border: 0;
+  padding: 0 10px;
+  color: grey;
+  font-size: 19px;
+}
+.contactform_cont li {
+  list-style-type: none;
+  overflow: hidden;
+}
+textarea {
+  height: 200px;
+  width:100%
+}
+.subject,
+.message {
+  width: 80%;
+  margin-top: 15px;
+}
+.subject input {
+  width: 100%;
+}
+.contactform_cont {
+  width: 100%;
+}
+.name,
+.email {
+  width: 211px;
+  float: left;
+}
+.contact_txt {
+  font-size: 43px;
+  margin: 30px 0;
+  color: #08fdd8;
+  font-weight: bold;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.btn_small {
+  background: none;
+  color: #08fdd8;
+  border: 1px solid #08fdd8;
+  padding: 10px 24px;
+}
+
+.awsome_input_border {
+  display: inline-block;
+  width: 0px;
+  height: 1px;
+  background: #fec938;
+  position: relative;
+  top: -13px;
+  -webkit-transition: all ease-in-out 0.15s;
+  -o-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+}
+.message .awsome_input_border{top:-17px}
+.email input:hover + .awsome_input_border,
+.name input:hover + .awsome_input_border {
+  width: 211px;
+}
+
+.subject input:hover + .awsome_input_border,
+.message textarea:hover + .awsome_input_border {
+  width: 100%;
+}

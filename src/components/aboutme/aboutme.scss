@@ -1,0 +1,154 @@
+@import  '../global.css';
+
+.mr10{margin-right:10px}
+  .m10{margin:10px}
+  .ml10{margin-left:10px}
+  .mb14{margin-bottom:14px}
+  
+.aboutme{margin-top:50px}
+.aboutme h1{text-align:center;font-size:44px;}
+.aboutme p{font-size:28px;line-height:45px;text-align:center}
+
+.aboutme   .buttons_cont{text-align:center;margin:55px}
+.toggle{display:none}
+
+
+.button_link{
+  padding: 24px 18px 24px;
+  border-radius: 12px;
+  color: #fff;text-decoration: none;    font-size: 25px;opacity:.9}
+  .button_link.red{background-color: #f12334;}
+  .button_link.grey
+  {
+    background-color: grey;
+
+  }
+
+/* text expand animation */
+.text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+  line-height:13px;
+}
+
+.text.hidden {
+  /* border-bottom: 1px solid #fff; */
+}
+
+.text li {
+  display: inline-block;
+  
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+
+
+
+
+
+
+/* yellow highlight animation */
+ul  li  {
+    color:#FFDD1B;
+    
+  }
+  ul li:hover{ 
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate; 
+  }
+  
+
+
+
+
+@-webkit-keyframes neon3 {
+    from {
+      text-shadow: 0 0 10px #fff,
+                 0 0 20px  #fff,
+                 0 0 30px  #fff,
+                 0 0 40px  #FFDD1B,
+                 0 0 70px  #FFDD1B,
+                 0 0 80px  #FFDD1B,
+                 0 0 100px #FFDD1B,
+                 0 0 150px #FFDD1B;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #fff,
+                 0 0 20px #FFDD1B,
+                 0 0 35px #FFDD1B,
+                 0 0 40px #FFDD1B,
+                 0 0 50px #FFDD1B,
+                 0 0 75px #FFDD1B;
+    }
+  }
+  
+  
+  @-moz-keyframes neon3 {
+    from {
+      text-shadow: 0 0 10px #fff,
+                 0 0 20px  #fff,
+                 0 0 30px  #fff,
+                 0 0 40px  #FFDD1B,
+                 0 0 70px  #FFDD1B,
+                 0 0 80px  #FFDD1B,
+                 0 0 100px #FFDD1B,
+                 0 0 150px #FFDD1B;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #fff,
+                 0 0 20px #FFDD1B,
+                 0 0 35px #FFDD1B,
+                 0 0 40px #FFDD1B,
+                 0 0 50px #FFDD1B,
+                 0 0 75px #FFDD1B;
+    }
+  }
+  
+  @keyframes neon3 {
+    from {
+      text-shadow: 0 0 10px #fff,
+                 0 0 20px  #fff,
+                 0 0 30px  #fff,
+                 0 0 40px  #FFDD1B,
+                 0 0 70px  #FFDD1B,
+                 0 0 80px  #FFDD1B,
+                 0 0 100px #FFDD1B,
+                 0 0 150px #FFDD1B;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #fff,
+                 0 0 20px #FFDD1B,
+                 0 0 35px #FFDD1B,
+                 0 0 40px #FFDD1B,
+                 0 0 50px #FFDD1B,
+                 0 0 75px #FFDD1B;
+    }
+  }
+  
