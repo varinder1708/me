@@ -20,7 +20,7 @@ class Aboutme extends Component {
 
 
   // text expand animation
-     setTimeout(()=>{ this.setState({animationclass:"show"}) },2000);
+     setTimeout(()=>{ this.setState({animationclass:"show"}) },1000);
   
   
   

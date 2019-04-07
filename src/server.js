@@ -25,6 +25,7 @@ import Html from './components/Html';
 // import errorPageStyle from './routes/error/ErrorPage.css';
 // import createFetch from './createFetch';
 // import passport from './passport';
+import mysql from 'mysql';
 import router from './router';
 import models from './data/models';
 import configureStore from './store/configureStore';
@@ -36,7 +37,7 @@ import config from './config';
 process.on('unhandledRejection', (reason, p) => {
   console.error('Unhandled Rejection at:', p, 'reason:', reason);
   // send entire app down. Process manager will restart it
-  process.exit(1);
+  process.exit(1);1
 });
 
 //
@@ -48,7 +49,32 @@ global.navigator = global.navigator || {};
 global.navigator.userAgent = global.navigator.userAgent || 'all';
 
 const app = express();
+// Insert post 1
+app.get('/submit', (req, res) => {
+  // Create connection
+const db = mysql.createConnection({
+  host     : 'sql12.freemysqlhosting.net',
+  user     : 'sql12286129',
+  password : 'GAt5achkKd',
+  database : 'sql12286129'
+});
 
+// Connect
+db.connect((err) => {
+  if(err){
+      throw err;
+  }
+  console.log('MySql Connected...');
+});
+  let post = {date:req.query.date,name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
+  let sql = 'INSERT INTO users SET ?';
+  let query = db.query(sql, post, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Post 1 added...');
+  });
+  console.log("sUBMIT----------");
+});
 //
 // If you are using proxy from external machine, you can set TRUST_PROXY env
 // Default is to trust proxy headers only from loopback interface.
