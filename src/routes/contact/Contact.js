@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import styles from '../home/home.css';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './home.scss';
-
+import Header from '../../components/header/header';
 import ContactForm from "../../components/contactform/contactform";
 import Mapcomponent from "../../components/Mapcomponent/Mapcomponent";
 class Contact extends Component {
@@ -13,8 +13,11 @@ class Contact extends Component {
   render() {
     return (
       <div>
+        <Header/>
+        <div className={`${s.relpos} ${s.overhide}`}>
         <div className={s.leftpanel} ><ContactForm /></div>
        <div className={s.rightpanel}> <Mapcomponent /></div>
+       </div>
       </div>
     );
   }

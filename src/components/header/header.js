@@ -6,7 +6,7 @@ class Header extends Component {
             <header>
                 {/* <div className="bold_txt">Varinder</div>
                 <div className="lightbold_txt">FREELANCE  DEVELOPER</div> */}
-
+<ul><li>Home</li><li>Contact</li></ul>
             </header>
         );
     }

@@ -26,6 +26,8 @@ import Html from './components/Html';
 // import createFetch from './createFetch';
 // import passport from './passport';
 import mysql from 'mysql';
+// import nodemailer from 'nodemailer';
+
 import router from './router';
 import models from './data/models';
 import configureStore from './store/configureStore';
@@ -49,32 +51,75 @@ global.navigator = global.navigator || {};
 global.navigator.userAgent = global.navigator.userAgent || 'all';
 
 const app = express();
-// Insert post 1
-app.get('/submit', (req, res) => {
-  // Create connection
-const db = mysql.createConnection({
-  host     : 'sql12.freemysqlhosting.net',
-  user     : 'sql12286129',
-  password : 'GAt5achkKd',
-  database : 'sql12286129'
-});
 
-// Connect
-db.connect((err) => {
-  if(err){
-      throw err;
-  }
-  console.log('MySql Connected...');
-});
-  let post = {date:req.query.date,name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
-  let sql = 'INSERT INTO users SET ?';
-  let query = db.query(sql, post, (err, result) => {
-      if(err) throw err;
-      console.log(result);
-      res.send('Post 1 added...');
-  });
-  console.log("sUBMIT----------");
-});
+// app.get('/submit', (req, res) => {
+  
+
+//   var smtpTransport = mailer.createTransport("SMTP",{
+//     service: "Gmail",
+//     auth: {
+//         user: "varinder.sadana@gmail.com",
+//         pass: "information@17"
+//     }
+// });
+
+// var mail = {
+//     from: "varinder.sadana@gmail.com",
+//     to: "varinder.sadana@gmail.com",
+//     subject: "Send Email Using Node.js",
+//     text: "Node.js New world for me",
+//     html: "<b>Node.js New world for me</b>"
+// }
+
+// smtpTransport.sendMail(mail, function(error, response){
+//     if(error){
+//         console.log(error);
+//     }else{
+//         console.log("Message sent: " + response.message);
+//     }
+
+//     smtpTransport.close();
+// });
+
+// const db = mysql.createConnection({
+//   host     : 'sql12.freemysqlhosting.net',
+//   user     : 'sql12286129',
+//   password : 'GAt5achkKd',
+//   database : 'sql12286129'
+// });
+
+
+// db.connect((err) => {
+//   if(err){
+//       throw err;
+//   }
+//   console.log('MySql Connected...');
+// });
+//   let post = {date:req.query.date,name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
+//   let sql = 'INSERT INTO users SET ?';
+//   let query = db.query(sql, post, (err, result) => {
+//       if(err) throw err;
+//       console.log(result);
+//       res.send('Post 1 added...');
+//   });
+//   console.log("sUBMIT----------");
+
+
+
+
+
+
+
+// });
+
+
+
+
+
+
+
+
+
 //
 // If you are using proxy from external machine, you can set TRUST_PROXY env
 // Default is to trust proxy headers only from loopback interface.
@@ -151,6 +196,43 @@ app.use((err, req, res, next) => {
 // -----------------------------------------------------------------------------
 app.get('*', async (req, res, next) => {
   try {
+  console.log(req.path);
+    if(req.path=="/submit")
+    {
+
+     // let testAccount = await nodemailer.createTestAccount();
+
+      
+
+
+const db = mysql.createConnection({
+  host     : 'remotemysql.com',
+  user     : 'yvksoW4hFA',
+  password : 'DcTTOS2PhM',
+  database : 'yvksoW4hFA'
+});
+
+
+db.connect((err) => {
+  if(err){
+      throw err;
+  }
+  console.log('MySql Connected...');
+});
+  let post = {date:req.query.date,name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
+  let sql = 'INSERT INTO users SET ?';
+  let query = db.query(sql, post, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Post 1 added...');
+  });
+  console.log("sUBMIT----------");
+
+
+
+
+    }
+    else{
     const css = new Set();
 
     // Enables critical path CSS rendering
@@ -218,6 +300,10 @@ app.get('*', async (req, res, next) => {
     const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);
     res.status(route.status || 200);
     res.send(`<!doctype html>${html}`);
+  
+  }
+  
+  
   } catch (err) {
     next(err);
   }

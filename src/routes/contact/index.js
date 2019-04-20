@@ -15,7 +15,7 @@ import Contact from './Contact';
 function action() {
   return {
     chunks: ['contact'],
-    title: 'aaaaaa',
+    title: 'Web Developer Delhi :Send Message',
     component: (
       <Layout>
         <Contact />

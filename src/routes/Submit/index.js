@@ -12,10 +12,16 @@ import Layout from '../../components/Layout';
 import Submit from './Submit';
 
 
-function action() {
+
+async function action() {
+
+
+ 
+
   return {
     chunks: ['submit'],
- //   title: about.title,
+    title: "asdfasd",
+ description:"aaaaa",
     component: (
       <Layout>
         <Submit/>

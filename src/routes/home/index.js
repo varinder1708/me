@@ -15,7 +15,7 @@ import Home from './Home';
 function action() {
   return {
     chunks: ['home'],
-    title: 'aaaaaa',
+    title: 'Web Developer Delhi',
     component: (
       <Layout>
         <Home />
