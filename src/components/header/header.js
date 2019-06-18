@@ -6,7 +6,7 @@ class Header extends Component {
     render() {
         return (
             <header>
-                {/* <div className="bold_txt">Varinder</div>
+                {/* <div className="bold_txt">Varinder test</div>
                 <div className="lightbold_txt">FREELANCE  DEVELOPER</div> */}
 <ul className={s.header}><li><a href="/">Home</a></li><li><a href="/contact">Contact</a></li></ul>
             </header>
