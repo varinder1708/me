@@ -13,12 +13,15 @@ import Home from './Home';
 
 
 function action() {
+  let config={};
+  config.pagename="home";
+ 
   return {
     chunks: ['home'],
     title: 'Web Developer Delhi',
     component: (
       <Layout>
-        <Home />
+        <Home config={config} />
        </Layout>
     ),
   };

@@ -207,9 +207,9 @@ app.get('*', async (req, res, next) => {
 
 const db = mysql.createConnection({
   host     : 'remotemysql.com',
-  user     : 'yvksoW4hFA',
-  password : 'DcTTOS2PhM',
-  database : 'yvksoW4hFA'
+  user     : 'BvJjF2N8ck',
+  password : '8bB7GxBczz',
+  database : 'BvJjF2N8ck'
 });
 
 

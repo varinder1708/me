@@ -13,8 +13,8 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        <div className={`${s.relpos} ${s.overhide}`}>
+        <Header config={this.props.config}/>
+        <div className={`${s.relpos} ${s.overhide} wrapper`}>
         <div className={s.leftpanel} ><ContactForm /></div>
        <div className={s.rightpanel}> <Mapcomponent /></div>
        </div>

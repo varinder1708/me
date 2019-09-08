@@ -28,7 +28,7 @@ class Aboutme extends Component {
   }
   render() {
     return (
-      <div className={s.aboutme}>
+      <div className={`${s.aboutme} wrapper`}>
         {/* <h1>Front-end Web Developer.</h1> */}
 
         <p ref="toggle" className={s.toggle}>

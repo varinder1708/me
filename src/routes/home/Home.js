@@ -15,7 +15,7 @@ class Home extends Component {
     return (
       <div>
         
-        <Header />
+        <Header config={this.props.config} />
         <Aboutme />
         <div></div>
         <Footer />

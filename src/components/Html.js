@@ -40,6 +40,8 @@ class Html extends React.Component {
       <html className="no-js" lang="en">
         <head>
           <meta charSet="utf-8" />
+          {/* <title>{title}</title> */}
+          <title>{title}</title>
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           {/* <title>{title}</title>
           <meta name="description" content={description} /> */}
@@ -48,6 +50,9 @@ class Html extends React.Component {
             <link key={script} rel="preload" href={script} as="script" />
           ))}
           <link rel="shortcut icon" href="https://timesofindia.indiatimes.com/icons/toifavicon.ico" type="image/x-icon"></link>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></link>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
           <link rel="manifest" href="/site.webmanifest" />
           {/* <link rel="apple-touch-icon" href="/iconaaa.png" /> */}
           {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" /> */}

@@ -7,9 +7,10 @@ body{
   /* background-image: url("images/grey_bg.jpg"); */
   background-color: #111;
   color:#fff;
-  max-width:1200px;
-  margin:0 auto;
+  /* max-width:1200px; */
+  
 }
+.wrapper{max-width:1200px; margin:0 auto;}
 
   
 

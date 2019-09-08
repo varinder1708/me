@@ -13,12 +13,15 @@ import Contact from './Contact';
 
 
 function action() {
+  let config={};
+  config.pagename="contact";
+  
   return {
     chunks: ['contact'],
     title: 'Web Developer Delhi :Send Message',
     component: (
       <Layout>
-        <Contact />
+        <Contact  config={config}/>
        </Layout>
     ),
   };
