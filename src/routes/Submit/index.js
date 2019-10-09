@@ -9,7 +9,15 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
-import Submit from './Submit';
+import Loadable from 'react-loadable';
+const Submit = Loadable({
+	loader: () => import('./Submit'),
+	loading() {
+		return <div>Loading...</div>
+	}
+})
+//import Submit from './Submit';
+
 
 
 

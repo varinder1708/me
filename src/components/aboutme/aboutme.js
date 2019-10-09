@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './aboutme.scss';
+// import Hooks from './Hooks';
 import $ from "jquery";
 
 class Aboutme extends Component {
@@ -30,7 +31,7 @@ class Aboutme extends Component {
     return (
       <div className={`${s.aboutme} wrapper`}>
         {/* <h1>Front-end Web Developer.</h1> */}
-
+        {/* <Hooks/> */}
         <p ref="toggle" className={s.toggle}>
           
             <div  className={s.mb14}> HI,</div>

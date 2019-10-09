@@ -9,9 +9,14 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
-import Contact from './Contact';
-
-
+//import Contact from './Contact';
+import Loadable from 'react-loadable';
+const Contact = Loadable({
+	loader: () => import('./Contact'),
+	loading() {
+		return <div>Loading...</div>
+	}
+})
 function action() {
   let config={};
   config.pagename="contact";

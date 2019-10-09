@@ -9,7 +9,14 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
-import Home from './Home';
+import Loadable from 'react-loadable';
+// const Home = Loadable({
+// 	loader: () => import('./Home'),
+// 	loading() {
+// 		return <div>Loading...</div>
+// 	}
+// })
+ import Home from './Home';
 
 
 function action() {

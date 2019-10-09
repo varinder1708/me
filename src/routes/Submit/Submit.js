@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from '../logo.svg';
 // import styles from '../home/home.css';
+// import Loadable from 'react-loadable';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 //import email from 'react-native-email';
 
