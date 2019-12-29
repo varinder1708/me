@@ -207,9 +207,9 @@ app.get('*', async (req, res, next) => {
 
 const db = mysql.createConnection({
   host     : 'remotemysql.com',
-  user     : 'BvJjF2N8ck',
-  password : '8bB7GxBczz',
-  database : 'BvJjF2N8ck'
+  user     : 'of0Q8MPXjD',
+  password : 'jVwFW1neKJ',
+  database : 'of0Q8MPXjD'
 });
 
 
@@ -219,7 +219,8 @@ db.connect((err) => {
   }
   console.log('MySql Connected...');
 });
-  let post = {date:req.query.date,name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
+  //let post = {date:req.query.date,name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
+  let post = {name:req.query.name, email:req.query.email,subject:req.query.subject,message:req.query.message};
   let sql = 'INSERT INTO users SET ?';
   let query = db.query(sql, post, (err, result) => {
       if(err) throw err;
